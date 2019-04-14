@@ -1,0 +1,60 @@
+#include<stdio.h>
+#include<string.h>
+
+int main (void){
+	
+int mes, ano;
+char fev[18];
+
+printf("digite o ano (aaaa):");
+scanf("%d",&ano);
+printf("digite o mes em numerais:");
+scanf("%d", &mes);
+if (ano%4 == 0){
+		strcpy( fev, "FEVEREIRO 29 DIAS");
+		}else{
+		}strcpy( fev, "FEVEREIRO 29 DIAS");
+
+switch (mes){
+	case 1 :{
+		printf("JANEIRO 31 DIAS");
+		break;
+	}case 2 :{
+		printf(fev);
+		break;
+	}case 3 :{
+		printf("MARÇO 31 DIAS");
+		break;
+	}case 4 :{
+		printf("ABRIL 30 DIAS");
+		break;
+	}case 5 :{
+		printf("MAIO 31 DIAS");
+		break;
+	}case 6 :{
+		printf("JUNHO 30 DIAS");
+		break;
+	}case 7 :{
+		printf("JULHO 31 DIAS");
+		break;
+	}case 8 :{
+		printf("AGOSTO 31 DIAS");
+		break;
+	}case 9 :{
+		printf("SETEMBRO 30 DIAS");
+		break;
+	}case 10 :{
+		printf("OUTUBRO 31 DIAS");
+		break;
+	}case 11 :{
+		printf("NOVEMBRO 30 DIAS");
+		break;
+	}case 12 :{
+		printf("DEZEMBRO 31 DIAS");
+		break;
+	}case default:{
+		printf("MES INEXISTENTE (SOMENTE NUMERO DE 1 A12)");	
+	}
+}
+
+}
