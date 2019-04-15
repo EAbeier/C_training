@@ -1,0 +1,53 @@
+#include<stdio.h>
+
+int main (void){
+int cod, quant,continuar;
+float tot=0;
+
+printf("[100]Cachorro quente:--1.70\n");
+printf("[101]Bauru simples:----2.30\n");
+printf("[102]Bauru com ovo:----2.60\n");
+printf("[103]Hamburguer:-------2.40\n");
+printf("[104]Chesseburguer:----2.50\n");
+printf("[105]Refrigerante:-----1.00\n");
+do{
+	printf("Digite o codigo do produto: ");
+	scanf("%d",&cod);
+	printf("Digite quantas unidades o cliente deseja: ");
+	scanf("%d",&quant);
+
+	switch(cod){
+		case 100:{
+			tot=tot+(quant*1.70);
+			break;
+		}
+		case 101:{
+			tot=tot+(quant*2.30);
+			break;
+		}
+		case 102:{
+			tot=tot+(quant*2.60);
+			break;
+		}
+		case 103:{
+			tot=tot+(quant*2.40);
+			break;
+		}
+		case 104:{
+			tot=tot+(quant*2.50);
+			break;
+		}
+		case 105:{
+			tot=tot+(quant*1.00);
+			break;
+		}
+		default:{
+			printf("código nao cadastrado");
+			break;
+		}
+	}
+	printf("O cliente deseja algo mais?: (1 para continuar/2 para sair)\n");
+	scanf("%d",&continuar);
+}while((continuar == 1));
+printf("\n O total e:%2.f ",tot);
+}
