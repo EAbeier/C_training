@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <locale.h>
+#include<ctype.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	setlocale(LC_ALL, "Portuguese");
+char Fp;
+float C,Tot,Vp;
+int Qp;
+printf("Qual valor do produto\n");
+scanf("%f", &C);
+printf("Forma de pagamento? \n");
+scanf(" %C", &Fp);
+Fp = toupper(Fp);
+switch(Fp){
+	case 'V':{
+		Tot= (C-(C*0.05));
+		printf("\no valor total é: %2.f\n",Tot);
+		break;
+	}
+	case 'P':{
+	printf("Quantas vezes será parcelado\n");
+	scanf("%d",&Qp);
+		if(Qp <= 3){
+		Tot=(C +(C*0.08));
+		Vp = Tot/Qp;
+		printf("Valor total: %2.f", Tot);
+		printf("\n Valor da prestação : %2.f \n",Vp);
+	}else{
+		Tot=(C+(C*0.10));
+		Vp=Tot/Qp;
+		printf("Valor total: %2.f", Tot);
+		printf("\n Valor da prestação : %2.f \n",Vp);
+		break;
+	}
+	}
+	default:{
+		("ERROU!");
+		break;
+	}
+}
+}
