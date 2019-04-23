@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <ctype.h>
+int main (){
+setlocale(LC_ALL, "Portuguese");
+float peso= 0.0; int i =0;
+while(i!=99){
+	printf ("\nC?digo da pe?a (P(1),M(2),G(3))\n");
+	scanf("%c",&i);
+  	printf ("\nSAIR DIGITE (99)\n");
+	scanf("%d",&i); 
+    switch (i) {
+   case 1: 
+	{
+   	peso= 23.5;
+     printf ("Peso %f:", peso);
+   break;
+	}
+   case 2:
+   {
+   	peso= 50.7;
+    printf ("Peso %f:", peso);
+   break;
+	}
+   case 3:
+   {
+   	peso= 102.9;
+    printf ("Peso %f:", peso);
+   break;
+	}
+   default:
+   {
+     printf ("Opção não encontrada");
+ 	}
+ }
+}
+   return 0;
+}
