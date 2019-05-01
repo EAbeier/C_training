@@ -1,0 +1,164 @@
+
+2 
+
+#include<stdio.h>
+
+int main()
+{
+
+int n;
+printf("digite um numero: ");
+scanf("%d",&n);
+
+if (n%2==0)
+{
+	printf("%d e par",n);
+}
+else
+{
+	printf("\n %d e impar \n",n);
+}
+if (n>0){
+	printf("%d e positivo",n);
+}
+else
+{
+	printf("\n%d e negativo ",n);
+}
+}
+
+
+3
+decrescente.
+#include<stdio.h>
+#include<ctype.h>
+#include<stdbool.h>
+int main(void)
+{
+	float n1,n2,num3,aux;
+	char cond;
+printf("\ndigite o numero 1: ");
+scanf("%f",&n1);
+printf("\ndigite o numero 2: ");
+scanf("%f",&n2);
+printf("\ndigite o numero 3: ");
+scanf("%f",&num3);
+printf("deseja em qual ordem? Crescente (C) ou Decrescente(D)\n");
+scanf("%s",&cond);
+ cond = toupper(cond);
+ 
+ switch (cond)
+ {
+ 	case 'C':{
+ 		if (n1 > n2)
+		 { 
+		 aux=n1; 
+		 n1 = n2;
+		 n2 = aux;
+		}
+		 if(n1> num3)
+		 { 
+		 aux =n1; 
+		 n1 =num3;
+		 num3=aux;
+		}
+		 if (n2 >num3)
+		 { 
+		 aux=n2; 
+		 n2=num3;
+		 num3= aux;
+		}
+		printf("%2.f \n%2.f \n%2.f",n1,n2,num3);
+		break;
+	 }
+	 case 'D':{
+ 		if (n1 < n2)
+		 { 
+		 aux=n1; 
+		 n1 = n2;
+		 n2 = aux;
+		}
+		 if(n1<num3)
+		 { 
+		 aux =n1; 
+		 n1 =num3;
+		 num3=aux;
+		}
+		 if (n2 <num3)
+		 { 
+		 aux=n2; 
+		 n2=num3;
+		 num3= aux;
+		}
+		printf("%2.f \n%2.f \n%2.f",n1,n2,num3);
+		break;
+		default:
+		{
+		printf("escolha inválida");
+		break;
+		}
+	}
+ }
+
+}
+4 - 	float
+
+5 -#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	float sal=0, nsal=0, por=0,dif=0;
+	int i;
+printf("digite o salario atual: ");
+scanf("%f",&sal);
+printf("digite o codigo do funcionario:(310,456,885)");
+scanf("%d",&i);
+ switch (i)
+ {
+ 	case 310: {
+ 		por = 0.05;
+ 		break;
+	 }
+	 case 456:{
+	 por = 0.075;
+ 	
+ 		break;
+ 	}
+ 	case 885:{
+	 por = 0.1;
+ 		break;
+ 	}
+ 	default:{
+	 por = 0.15;
+ 		break;
+ 	}
+	
+}
+nsal =sal+sal*por;
+dif=nsal-sal;
+	printf("\no novo salario e %2.2f",nsal);
+	printf("\nsalario antigo e %2.2f",sal);
+	printf("\na diferenca de salario e %2.2f",dif);
+	
+ 
+}
+
+6 - 1234.5;
+
+7 -linha 12 e 15
+
+8- funcao_01
+
+9 - caso 04
+
+10- linha 16
+
+11 -linha 15
+
+12 - nenhuma das anteriores
+
+13 - funcao_01
+
+14 - math.h
+
+
