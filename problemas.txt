@@ -1,7 +1,36 @@
+1 -algoritmo "RaizIgualASomaDasdezenas"
+// Autores :  Émerson e Carlos
+// Data : 01/05/2019
+// Seção de Declarações
+var
+soma, num, d1, d2 : inteiro
+raiz: real
 
-2 
-
-#include<stdio.h>
+inicio
+      //entrada do numero com 4 algarismos
+		escreva("Digite um número com 4 algarismos: ")
+		leia(num)
+		//tratamento para separar o numero em duas dezenas
+				d1 <- (num % 1000)
+				EscrevaL("Primeira dezena é: ",d1)
+					
+				d2 <- num % 100
+				EscrevaL("Segunda dezena é: ", d2)
+				//realiza a soma das duas dezenas e da o output da soma	
+				soma <- d1 + d2
+				EscrevaL("Soma das duas dezenas é: " , soma)
+				// extrai a raiz do numero inicial e da output da raiz
+				raiz <- RaizQ(num)
+				EscrevaL("A raiz quadrada do numero inteiro é: ", raiz:8:2)
+			//verifica se a raiz é igual a soma das duas dezenas e da output se é igual ou não		
+			se (soma = raiz) entao
+			Escreval("A raiz quadrada é igual a soma entre a primeira dezena e a segunda dezena")
+			senao
+			escreval("A raiz quadrada é diferente a soma entre a primeira dezena e a segunda dezena")
+			fimSe
+fimalgoritmo
+	
+2 - #include<stdio.h>
 
 int main()
 {
@@ -28,9 +57,7 @@ else
 }
 
 
-3
-decrescente.
-#include<stdio.h>
+3 - #include<stdio.h>
 #include<ctype.h>
 #include<stdbool.h>
 int main(void)
@@ -94,7 +121,7 @@ scanf("%s",&cond);
 		break;
 		default:
 		{
-		printf("escolha inv�lida");
+		printf("escolha inválida");
 		break;
 		}
 	}
@@ -103,7 +130,7 @@ scanf("%s",&cond);
 }
 4 - 	float
 
-5 -#include<stdio.h>
+5 - #include<stdio.h>
 #include<stdlib.h>
 int main()
 {
