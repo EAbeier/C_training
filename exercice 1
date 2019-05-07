@@ -1,0 +1,42 @@
+/*O departamento que controla o índice de poluição do meio ambiente mantém três grupos de indústrias
+que são altamente poluentes. O índice de poluição aceitável varia de 0,05 a 0,25. Se o índice sobe até
+0,3 as empresas do 1º grupo são notificadas a paralisarem suas atividades. Se o índice aumenta até 0,4
+as empresas do 1º e 2º grupos são notificadas a paralisarem suas atividades. Finalmente, se o índice
+cresce para uma valor maior que 0,4 as empresas do 1º, 2º e 3º grupos devem ser notificadas a
+paralisarem suas atividades. Escrever um algoritmo e um programa que leia o índice de poluição
+medido e emita a notificação adequada aos diferentes grupos de empresas.*/
+#include<stdio.h>
+
+int main()
+{
+float IP,VA;
+	printf("Qual o indice de poluicao? ");
+	scanf("%f",&IP);
+	
+	if (IP<=0.25)
+	{
+		printf("Indice de poluicao dentro do permitido\n");
+		printf("Todos os grupos podem operar normalmente");
+	}
+	if ((IP > 0.25)&&(IP<=0.3))
+	{
+		VA = (IP-0.25);
+		printf("Indice de poluicao esta %2.3f acima do maximo permitido\n",VA);
+		printf("Grupo 1 deve imediatamente parar as atividades");
+	}
+	if ((IP > 0.3)&&(IP<=0.4))
+	{
+		VA = (IP-0.25);
+		printf("Indice de poluicao esta %2.3f acima do maximo permitido\n",VA);
+		printf("Grupo 1 e grupo 2 devem imediatamente parar as atividades");
+	}
+	else{
+	}
+	if (IP > 0.4)
+	{
+		VA = (IP-0.25);
+		printf("Indice de poluicao esta %2.3f acima do maximo permitido\n",VA);
+		printf("Todos os grupos devem imediatamente parar as atividades");
+	}
+		
+}
