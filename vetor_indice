@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+int main()
+{
+	int indice;
+	int vetor[100];
+	int temp =0;
+	for(indice = 0; indice<100; indice++){
+		vetor[indice]=temp;
+		temp++;	
+	}
+	for(indice=0; indice<100; indice++){
+		printf("numero %d = %d \n",indice+1, vetor[indice]);
+	}
+}
