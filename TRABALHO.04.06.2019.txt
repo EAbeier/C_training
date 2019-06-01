@@ -1,0 +1,17 @@
+1 - 
+#include<stdio.h>
+#include<locale.h>
+
+setlocale(LC_ALL,"portuguese");
+
+float CelsiusToFahrenheit(float Cel, float Far);
+float FahrenheitToCelsius(float Cel, float Far);
+
+int main (void){
+	printf("")	
+}
+float CelsiusToFahrenheit(float Cel, float Far){
+	
+}
+float FahrenheiToCelsiust(float Cel, float Far){
+}

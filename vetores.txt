@@ -1,0 +1,24 @@
+1)  Dada uma seqüência de n números, imprimi-la na ordem inversa à da leitura
+
+2)  Tentando descobrir se um dado era viciado, um jogador honesto o lançou n vezes. Dados os n resultados dos lançamentos, determinar o número de ocorrências de cada face.
+
+3) Dada uma seqüência de n números reais, determinar os números que compõem a seqüência e o número de vezes que cada um deles ocorre na mesma.
+
+Exemplo:  n = 8
+Seqüência: -1.7,  3.0,  0.0,  1.5,  0.0, -1.7,  2.3, -1,7
+Saída:       -1.7 ocorre 3 vezes  
+                   3.0 ocorre 1 vez  
+                   0.0 ocorre 2 vezes  
+                   1.5 ocorre 1 vez  
+                   2.3 ocorre 1 vez
+4)  Faça um programa que possua um vetor denominado A que armazene 6 numeros intei- ´ ros. O programa deve executar os seguintes passos:
+(a) Atribua os seguintes valores a esse vetor: 1, 0, 5, -2, -5, 7.
+(b) Armazene em uma variavel inteira (simples) a soma entre os valores das posições A[0], A[1] e A[5] do vetor e mostre na tela esta soma.
+(c) Modifique o vetor na  posição 4, atribuindo a esta posição o valor 100. 
+(d) Mostre na tela cada valor do vetor A, um em cada linha.
+5)  Crie um programa que le 6 valores inteiros e, em seguida, mostre na tela os valores lidos de forma inversa.
+6)  Ler um conjunto de numeros reais, armazenando-o em vetor e calcular o quadrado das componentes deste vetor, armazenando o resultado em outro vetor. Os conjuntos têm 10 elementos cada. Imprimir todos os conjuntos.
+7)  Faça um programa para ler a nota da prova de 15 alunos e armazene num vetor, calcule e imprima a media geral, a maior e a menor nota.
+8)  Façaa um programa que preencha um vetor com 10 numeros reais, calcule e mostre a quantidade de números negativos e a soma dos n números positivos desse vetor.
+9)  Leia um vetor com 20 numeros inteiros. Escreva os elementos do vetor eliminando ele- ´ mentos repetidos.
+10)  . Escreva um programa que leia numeros inteiros no intervalo [0,50] e os armazene em um  vetor com 10 posições. Preencha um segundo vetor apenas com os números ímpares do primeiro vetor. Imprima os dois vetores, 2 elementos por linha.
