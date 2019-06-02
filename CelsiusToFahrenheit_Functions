@@ -1,0 +1,58 @@
+
+#include<stdio.h>
+#include<ctype.h>
+#include<locale.h>
+float celsius(float);
+float fahrenheit(float);
+
+int main(){
+setlocale(LC_ALL,"");
+	
+	char choice;
+	float fahr;
+	float cel;
+	float convert;
+	
+	printf("Escolha para qual temperatura quer converter:\n ");	
+	printf("[C] para Converter Celsius para Fahrenheit\n");
+	printf("[F] para Converter Fahrenheit para Celsius\n");
+	scanf("%c",&choice);
+	
+	choice = toupper(choice);
+	
+	switch (choice){
+		
+		case 'C':{
+			printf("digite a temperatura em Celsius:");
+			scanf("%f",&cel);
+			convert=fahrenheit(cel);
+			printf("%2.2f °C em °F é: %2.2f\n", cel, convert);
+			break;
+		}
+		case 'F':{
+			printf("digite a temperatura em Fahrenheit:");
+			scanf("%f",&fahr);
+			convert = celsius(fahr);
+			printf("%2.2f °F em °C é: %2.2f\n", fahr,convert);
+			
+			break;
+		}
+		default:{
+			printf("entrada não identificada.\n");
+			break;
+		}
+	}
+	
+}
+float fahrenheit(float C){
+	float F;
+	F = (9*C)/5+32;
+	
+	return F;
+}
+float celsius(float F){
+	float C;
+	C= (5*(F-32))/9;
+	
+	return C;
+}
