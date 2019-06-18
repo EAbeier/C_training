@@ -1,0 +1,113 @@
+#include <stdio.h>
+int MatrizOperacao(int);
+int main(){
+	int choice;
+	int TAM;
+	printf("entre com a escolha: \n");
+	printf("[1] para operacoes com matrizes(determinante soma e subtração)\n");
+	printf("[2] para equacao de Torricelli(V²=V0²2*a*delta(S))\n");
+	printf("[3] para calculo de movimento retilineo uniformemente variado\n");
+	printf("[4] calculo da nota final de uma aluno: Média Final = (Grau A + 2X Grau B)/3\n");
+	printf("[5] Formula de baskara;\n");
+	scanf("%d",&choice);
+	
+	switch(choice){
+		case 1: {
+			printf("digite o tamanho da matriz: ");
+   			scanf("%d",&TAM);
+			MatrizOperacao(TAM);
+			break;
+		}
+		case 2: {
+			
+			break;
+		}
+		case 3: {
+			
+			break;
+		}
+		case 4: {
+			
+			break;
+		}
+		case 5: {
+			
+			break;
+		}
+		default: {
+			printf("escolha nao reconhecida!");
+			break;
+		}
+	}
+}
+
+
+int MatrizOperacao (int TAM){
+   int i,j, vlr_a, vlr_b;
+   int determ;
+   int matriz [TAM][TAM];
+   int matrizrecebe [TAM][TAM];
+   int matrizresultado [TAM][TAM];
+   int matrizresultsoma[TAM][TAM];
+   int matrizsoma[TAM][TAM];
+   //subtração
+		
+   		for (i=0; i < TAM; i++)
+      	for (j=0; j < TAM; j++){
+         printf ("Entre item matriz original %d %d:", i + 1, j + 1);
+         scanf ("%d", &vlr_a);
+         matriz [i][j] = vlr_a;
+      	}
+    for (i=0; i < TAM; i++)
+      for (j=0; j < TAM; j++){
+         printf ("Entre item matriz que subtraira %d %d:", i + 1, j + 1);
+         scanf ("%d", &vlr_b);
+         matrizrecebe [i][j] = vlr_b;
+      }
+     for (i=0; i < TAM; i++){
+      for (j=0; j < TAM; j++){
+      	matrizresultado [i][j] = 0;
+   		matrizresultado [i][j] = matriz[i][j] - matrizrecebe[i][j];
+	 }
+	
+	  //soma
+	
+       for (i=0; i < TAM; i++)
+      for (j=0; j < TAM; j++){
+         printf ("Entre item matriz que somara %d %d:", i + 1, j + 1);
+         scanf ("%d", &vlr_b);
+         matrizsoma [i][j] = vlr_b;
+      }
+     for (i=0; i < TAM; i++){
+      for (j=0; j < TAM; j++){
+      	matrizresultsoma [i][j] = 0;
+   		matrizresultsoma [i][j] = matriz[i][j] + matrizsoma[i][j];
+	 }
+	}
+	
+	//resultados
+	{
+	//determinante
+	printf("determinante das matriz!\n");
+   determ = matriz[0][0] * matriz [1][1] - matriz[0][1] * matriz [1][0];
+   printf ("Determinante : %d\n", determ);
+   
+	}	
+	//soma
+	{
+	printf("Soma das matrizes\n");
+	 for (i=0; i < TAM; i++)
+  		for (j=0; j < TAM; j++){
+	printf ("Numero da posicao %d %d  : %d\n", i,j, matrizresultsoma[i][j]); 
+	}
+	}
+	//subtracao
+	}
+	printf("Soma das matrizes\n");
+	 for (i=0; i < TAM; i++)
+  		for (j=0; j < TAM; j++){
+	printf ("Numero da posicao %d %d  : %d\n", i,j, matrizresultado[i][j]); 
+	  }			
+}
+
+int
