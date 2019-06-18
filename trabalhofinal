@@ -1,8 +1,19 @@
 #include <stdio.h>
+#include <math.h>
+
+
 int MatrizOperacao(int);
+float Torricelli(float,float,float,float);
+float DeslocamentoRetilineoUV(float,float,float,float);
+float Media(float,float);
+float Bhaskara(float,float,float);
+
 int main(){
 	int choice;
-	int TAM;
+	int TAM;//variavel matrizes
+	float V0,acel,S0, S,a,t;//variáveis torricelli e MRUV
+	float N1, N2; // variáveis media final
+	float A,B,C;//variáves bhaskara
 	printf("entre com a escolha: \n");
 	printf("[1] para operacoes com matrizes(determinante soma e subtração)\n");
 	printf("[2] para equacao de Torricelli(V²=V0²2*a*delta(S))\n");
@@ -19,19 +30,45 @@ int main(){
 			break;
 		}
 		case 2: {
-			
+			printf("Digite o valor dos itens da equacao de Torricelli ");
+			printf("Velocidade inicial: ");
+			scanf("%f",&V0);
+			printf("Aceleração:");
+			scanf("%f",&acel);
+			printf("deslocamento inicial:");
+			scanf("%f",&S0);
+			printf("Deslocamento final: ");
+			scanf("%f",&S);
+			Torricelli(V0,acel,S0,S);
 			break;
 		}
 		case 3: {
-			
+			printf ("Digite o valor de (So) Posicao Inicial: \n");
+			scanf("%f", &S0);
+			printf ("Digite o valor de (Vo) Velocidade Inicial: \n");
+			scanf("%f", &V0);
+			printf ("Digite o valor de (a) aceleracao: \n");
+			scanf("%f", &a);
+			printf ("Digite o valor de (t) Intervalo de Tempo: \n");
+			scanf("%f", &t);
+			DeslocamentoRetilineoUV(S0,V0,a,t);
 			break;
 		}
 		case 4: {
-			
+			printf ("Digite o valor da nota de Grau A\n");
+   			scanf ("%f",& N1);
+   			printf ("Digite o valor da nota de Grau B\n");
+   			scanf ("%f",& N2);
+   			Media(N1,N2);
 			break;
 		}
 		case 5: {
-			
+			printf ("Digite o valor de A: \n");
+			scanf("%f", &a);
+			printf ("Digite o valor de B: \n");
+			scanf("%f", &b);
+			printf ("Digite o valor de C: \n");
+			scanf("%f", &c);
 			break;
 		}
 		default: {
@@ -110,4 +147,41 @@ int MatrizOperacao (int TAM){
 	  }			
 }
 
-int
+float Torricelli(float V0, float acel, float S0, float S){
+	
+	
+	float V;
+	
+	V= (sqrt((V0*V0)+2*acel*(S-S0)));
+	printf("velocidade final e %2.2fm/s",V);
+}
+
+float DeslocamentoRetilineoUV(float S0, float V0, float a, float t) {
+	float S;
+
+         S = S0 + (V0 * t) + (a * pow(t,2));
+         printf("Resultado %10.2fm ", S);
+ 
+return 0;
+ 
+}
+float Media(float N1, float N2){
+   float media;
+
+   
+      media =(N1 + (2*N2))/3;
+      
+   		if (media >=6) 
+        {                                                              
+          printf ("Voce foi APROVADO sua media final e %2.2f", media);
+                                        
+        }
+   		else
+        { 
+          printf ("Voce foi REPROVADO sua media final e %2.2f", media);
+        }
+     return 0;                           
+}
+float Bhaskara(float a, float b, float c){
+	float delta, x1, x2;
+}
