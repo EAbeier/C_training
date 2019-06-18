@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-
+#include <locale.h>
 
 int MatrizOperacao(int);
 float Torricelli(float,float,float,float);
@@ -9,17 +9,18 @@ float Media(float,float);
 float Bhaskara(float,float,float);
 
 int main(){
+	setloacal(LC_ALL,"");
 	int choice;
 	int TAM;//variavel matrizes
 	float V0,acel,S0, S,a,t;//variáveis torricelli e MRUV
 	float N1, N2; // variáveis media final
 	float A,B,C;//variáves bhaskara
 	printf("entre com a escolha: \n");
-	printf("[1] para operacoes com matrizes(determinante soma e subtração)\n");
-	printf("[2] para equacao de Torricelli(V²=V0²2*a*delta(S))\n");
-	printf("[3] para calculo de movimento retilineo uniformemente variado\n");
-	printf("[4] calculo da nota final de uma aluno: Média Final = (Grau A + 2X Grau B)/3\n");
-	printf("[5] Formula de baskara;\n");
+	printf("[1] para operações com matrizes(determinante soma e subtração)\n");
+	printf("[2] para equação de Torricelli(V²=V0²2*a*delta(S))\n");
+	printf("[3] para cálculo de movimento retilineo uniformemente variado\n");
+	printf("[4] cálculo da nota final de uma aluno: Média Final = (Grau A + 2X Grau B)/3\n");
+	printf("[5] Fórmula de bhaskara;\n");
 	scanf("%d",&choice);
 	
 	switch(choice){
@@ -30,7 +31,7 @@ int main(){
 			break;
 		}
 		case 2: {
-			printf("Digite o valor dos itens da equacao de Torricelli ");
+			printf("Digite o valor dos itens da equação de Torricelli ");
 			printf("Velocidade inicial: ");
 			scanf("%f",&V0);
 			printf("Aceleração:");
@@ -47,7 +48,7 @@ int main(){
 			scanf("%f", &S0);
 			printf ("Digite o valor de (Vo) Velocidade Inicial: \n");
 			scanf("%f", &V0);
-			printf ("Digite o valor de (a) aceleracao: \n");
+			printf ("Digite o valor de (a) aceleração: \n");
 			scanf("%f", &a);
 			printf ("Digite o valor de (t) Intervalo de Tempo: \n");
 			scanf("%f", &t);
@@ -64,11 +65,12 @@ int main(){
 		}
 		case 5: {
 			printf ("Digite o valor de A: \n");
-			scanf("%f", &a);
+			scanf("%f", &A);
 			printf ("Digite o valor de B: \n");
-			scanf("%f", &b);
+			scanf("%f", &B);
 			printf ("Digite o valor de C: \n");
-			scanf("%f", &c);
+			scanf("%f", &C);
+			Bhaskara(A,B,C);
 			break;
 		}
 		default: {
@@ -183,5 +185,31 @@ float Media(float N1, float N2){
      return 0;                           
 }
 float Bhaskara(float a, float b, float c){
-	float delta, x1, x2;
+	float delta,x1,x2;
+	
+	if(a==0){
+		printf("A tem que ser diferente de 0");
+	}else{
+		delta = (pow(b,2))-(4*a*c);
+	}
+	if(delta==0)
+	{
+		printf("delta igual a %2.f, portanto tera raizes iguais",delta);
+			x1=(-b+sqrt(delta))/2*a;
+			x2=(-b-sqrt(delta))/2*a;
+		printf("o valor de x1 = %2.2f e x2= %2.2f",x1,x2);		
+	}
+	else
+	{
+	}if(delta>0){
+		printf("delta igual a %2.f, portanto tera raizes diferentes",delta);
+			x1=(-b+sqrt(delta))/2*a;
+			x2=(-b-sqrt(delta))/2*a;
+		printf("o valor de x1 = %2.2f e x2= %2.2f",x1,x2);		
+	}
+	if(delta<0){
+		printf("delta igual a %2.f, portanto nao existem raizes reais",delta);
+					
+	}
+	
 }
