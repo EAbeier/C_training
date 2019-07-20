@@ -1,0 +1,49 @@
+//Que informe a área e o volume de um cilindro.
+#include<stdio.h>
+#include<math.h>
+#define PI 3.1415
+
+
+float base(float);
+float area(float, float,float);
+float volume(float,float);
+int main()
+{
+float basemain, areamain, volumemain,alturamain,raiomain;
+printf("Entre com o valor do raio");
+scanf("%f",&raiomain);
+basemain=base(raiomain);
+printf("entre com o valor da altura");
+scanf("%f",&alturamain);
+areamain=area(basemain, alturamain,raiomain);
+volumemain= volume(basemain,alturamain);
+printf("area total: %f cm2", areamain);
+printf("volume total: %f cm3", volumemain);
+}
+
+float base (float raio)
+{
+float basefunction;
+float pi= PI;
+basefunction= PI*(pow(raio,2));
+return basefunction;
+}
+
+
+float area (float base, float h, float r)
+{
+float areafunction;
+float pi=PI;
+areafunction = (2*pi*r*h)+(2*base);
+return areafunction;
+
+}
+
+
+float volume (float base,float h)
+{
+	float volumefunction;
+	volumefunction= base*h;
+	return volumefunction;
+	
+}
