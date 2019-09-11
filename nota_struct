@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+float media (float,float);
+struct cadastro
+{
+    int N_Matricula;
+    float N1,N2;
+};
+
+
+
+int main()
+{
+    struct cadastro c;
+    int i,n;
+    float m;
+
+    for(i=0;i<n;i++)
+    {
+        printf("digite o numero do aluno %d",++i);
+        scanf("%d",&c.N_Matricula);
+        printf("digite a nota 1 do aluno %d",++i);
+        scanf("%f",&c.N1);
+        printf("digite a nota 2 do aluno %d",++i);
+        scanf("%f",&c.N2);
+        m = media(c.N1,c.N2);
+        printf("media aluno %d = %f",++i,m);
+    }
+
+}
+float media(float a, float b)
+    {
+        float m;
+        m=(a*b)/2;
+        return m;
+    }
