@@ -1,0 +1,68 @@
+#include<stdio.h>
+struct aluno
+{
+	int cpf;
+	int matricula;
+	char nome[35];
+	char curso[35];
+};
+int main()
+{
+	struct aluno n[10];	
+	int i = 0;
+	int opcao = 0;
+	
+	do
+	{
+		
+		printf("[1]criar cadastro  ");
+		printf("[2]apagar cadastro ");
+		printf("[3]procurar cadastro");
+		printf("[4]encerrar");
+		printf("entre com a opção:\n ");
+		scanf("%d",opcao);
+		
+		switch(opcao)
+		{
+			case 1 :
+			{
+				include();
+				break;
+			}
+			case 2 :
+			{
+				clean();
+				break;
+			}
+			case 3 :
+			{
+				search();
+				break;
+			}
+			case 4 :
+			{
+				printf("encerrrando programa...");
+				break;
+			}
+			default 
+			{
+				printf("opcao nao inexistente\n");
+				break;
+			}
+		}
+		
+	}
+	while (opcao!=4)
+}
+void include()
+{
+	
+}
+void clean()
+{
+	
+}
+void search()
+{
+	
+}
