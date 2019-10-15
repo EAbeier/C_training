@@ -7,27 +7,31 @@ typedef struct
 	char curso[35];
 }Aluno;
 void include(Aluno *n);
+void clean();
+int main();
+void search();
+
 int main()
 {
-	Aluno n[10];	
-	int i = 0;
+	int i = 10;
+	Aluno n[i];	
 	int opcao = 0;
 	
 	do
 	{
 		
-		printf("[1]criar cadastro  ");
-		printf("[2]apagar cadastro ");
-		printf("[3]procurar cadastro");
-		printf("[4]encerrar");
+		printf("[1]criar cadastro\n");
+		printf("[2]apagar cadastro\n");
+		printf("[3]procurar cadastro\n");
+		printf("[4]encerrar\n");
 		printf("entre com a opção:\n ");
-		scanf("%d",opcao);
+		scanf("%d",&opcao);
 		
 		switch(opcao)
 		{
 			case 1 :
 			{
-				include(&n);
+				include(&n[i]);
 				break;
 			}
 			case 2 :
@@ -45,7 +49,7 @@ int main()
 				printf("encerrrando programa...");
 				break;
 			}
-			default 
+			default:
 			{
 				printf("opcao nao inexistente\n");
 				break;
@@ -53,9 +57,9 @@ int main()
 		}
 		
 	}
-	while (opcao!=4)
+	while (opcao!=4);
 }
-void include(struct Aluno *n )
+void include(Aluno *n )
 {
 	
 }
