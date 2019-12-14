@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	int prox=0,atu =1 ,ant=0,soma;
+	
+	while(atu<=4000000)
+	{
+		prox=ant+atu;
+		if(prox%2==0)
+		{
+			soma+=prox;
+			printf("%d\n",prox);
+		}
+		ant = atu;
+		atu=prox;
+	}
+	printf("\nsoma dos pares é: %d\n", soma);
+}
