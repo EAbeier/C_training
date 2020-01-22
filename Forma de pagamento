@@ -4,43 +4,59 @@
 #include <locale.h>
 #include<ctype.h>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main() {
+int main() 
+{
 	setlocale(LC_ALL, "Portuguese");
-char Fp;
-float C,Tot,Vp;
-int Qp;
-printf("Qual valor do produto\n");
-scanf("%f", &C);
-printf("Forma de pagamento? \n");
-scanf(" %C", &Fp);
-Fp = toupper(Fp);
-switch(Fp){
-	case 'V':{
-		Tot= (C-(C*0.05));
-		printf("\no valor total é: %2.f\n",Tot);
-		break;
-	}
-	case 'P':{
-	printf("Quantas vezes será parcelado\n");
-	scanf("%d",&Qp);
-		if(Qp <= 3){
-		Tot=(C +(C*0.08));
-		Vp = Tot/Qp;
-		printf("Valor total: %2.f", Tot);
-		printf("\n Valor da prestação : %2.f \n",Vp);
-	}else{
-		Tot=(C+(C*0.10));
-		Vp=Tot/Qp;
-		printf("Valor total: %2.f", Tot);
-		printf("\n Valor da prestação : %2.f \n",Vp);
-		break;
-	}
-	}
-	default:{
+	char Formapagamento;
+	float Valorproduto,Tot,Valorparcela;
+	int Qtdparcelas;
+
+	printf("Qual valor do produto\n");
+	scanf("%f", &Valorproduto);
+	printf("Forma de pagamento? A vista [V] parcelado [P] \n");
+	scanf(" %C ", &Formapagamento);
+	Formapagamento = toupper(Formapagamento);
+
+
+	switch(Formapagamento)
+	{
+	
+		case 'V':
+		{
+			//pagamento a vista
+			Tot= (Valorproduto-(Valorproduto*0.05));
+			printf("\no valor total é: %2.f\n",Tot);
+			break;
+		}
+	
+		case 'P':
+		{
+			printf("Quantas vezes será parcelado\n");
+			scanf("%d",&Qtdparcelas);
+			if(Qtdparcelas <= 3)
+			{
+				//pagamento em até 3 parcelas
+				Tot=(Valorproduto +(Valorproduto*0.08));
+				Valorparcela = Tot/Qtdparcelas;
+				printf("Valor total: %2.f", Tot);
+				printf("\n Valor da prestação : %2.f \n",Valorparcela);		
+				break;
+			}
+			else
+			{
+				//pagamento acima de 3 parcelas
+				Tot=(Valorproduto+(Valorproduto*0.10));
+				Valorparcela=Tot/Qtdparcelas;
+				printf("Valor total: %2.f", Tot);
+				printf("\n Valor da prestação : %2.f \n",Valorparcela);
+				break;
+			}
+		}
+		default:
+		{
 		("ERROU!");
 		break;
+		}
 	}
-}
 }
