@@ -6,7 +6,7 @@ int main (){
 setlocale(LC_ALL, "Portuguese");
 float peso= 0.0; int i =0;
 while(i!=99){
-	printf ("\nC?digo da pe?a (P(1),M(2),G(3))\n");
+	printf ("\nCódigo da peça (P(1),M(2),G(3))\n");
 	scanf("%c",&i);
   	printf ("\nSAIR DIGITE (99)\n");
 	scanf("%d",&i); 
@@ -37,4 +37,4 @@ while(i!=99){
 }
    return 0;
 }
-https://dicasdeprogramacao.com.br/algoritmo-para-validar-cpf/
+
